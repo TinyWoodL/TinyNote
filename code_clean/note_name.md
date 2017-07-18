@@ -45,7 +45,7 @@ int accountLists | int accountGroup | int accounts;
 ```
 
 
-###有意义的区分
+### 有意义的区分
 
 如用info、data这样的词修饰的命名意义含混。
 动词不应该出现在变量名中。table不应该出现在表名中:
@@ -57,7 +57,7 @@ customerData   ===> customer
 ```
 
 
-###可阅读的名字
+### 可阅读的名字
 
 简单来说就是别自己瞎造词，选通用一点的单词。
 
