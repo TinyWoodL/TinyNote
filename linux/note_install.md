@@ -19,6 +19,6 @@
     + 安装：rpm -ivh 软件包名
     + 卸载：rpm -e 软件名
 
-### 通过apt-get/yum/homebrew
+## 通过apt-get/yum/homebrew
 
 
