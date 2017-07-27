@@ -59,3 +59,31 @@
 )
 
 ; (sqrt 16.00)
+
+; version 1: recursive model
+(define (recursive-f n)
+    (define (cala x y z)
+        (+ x (* 2 y) (* 3 z))
+    )
+    (cond ((< n 3) n)
+          (else (cala (recursive-f (- n 1)) (recursive-f (- n 2)) (recursive-f (- n 3))))
+    )
+)
+
+; (recursive-f 3)
+; version 2: linear model
+
+(define (linear-f n)
+    (define (cala x y z)
+        (+ x (* 2 y) (* 3 z))
+    )
+    (define (f-iter a b c count)
+        (cond ((< n 3) n)
+              ((>= count n) a)
+              (else (f-iter (cala a b c) a b (+ count 1)))
+        )
+    )
+    (f-iter 2 1 0 2)
+)
+
+; (linear-f 4)
