@@ -87,3 +87,16 @@
 )
 
 ; (linear-f 4)
+
+; practice 1-16
+(define (fast-expt x n)
+    (define (iter a b c)
+        (cond ((= c 0) a)
+              ((odd? c) (iter (* a b) b (- c 1)))
+              (else (iter a (* b b) (/ c 2)))
+        )
+    )
+    (iter 1 x n)
+)
+
+; (fast-expt 2 10)
