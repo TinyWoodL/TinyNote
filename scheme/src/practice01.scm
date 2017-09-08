@@ -124,3 +124,30 @@
 ; (smallest-divisor 199)
 ; (smallest-divisor 1999)
 ; (smallest-divisor 19999)
+
+(define (timed-prime-test n)
+    (newline)
+    (display n)
+    (start-prime-test n (runtime))
+)
+
+(define (start-prime-test n start-time)
+    (if (prime? n)
+        (report-prime (- (runtime) start-time))
+    )
+)
+
+(define (report-prime elapsed-time)
+  (display " *** ")
+  (display elapsed-time))
+
+(define (search-for-primes startNum count)
+    (timed-prime-test startNum)
+    (if (< count 3)
+        (if (prime? startNum)
+            (search-for-primes (+ startNum 1) (+ count 1))
+            (search-for-primes (+ startNum 1) count))
+    )
+)
+
+;(search-for-primes 100000 0)
