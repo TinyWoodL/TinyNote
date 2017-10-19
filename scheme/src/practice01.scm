@@ -151,3 +151,10 @@
 )
 
 ;(search-for-primes 100000 0)
+
+(define (f g)
+  (g 2))
+
+
+;(f square)
+;(f f)
